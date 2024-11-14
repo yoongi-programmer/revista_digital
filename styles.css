@@ -15,22 +15,31 @@ header {
 }
 /* Contenedor del header para alinear logo, título y nav */
 .header-container {
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que el encabezado esté por encima del resto del contenido */
+    padding: 10px 20px;
     display: flex;
+    position: fixed;
+    background-color: #000f25bb;
     align-items: center;
     justify-content: space-between;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+    margin-bottom: 20px;
 }
 
 /* Logo */
 .logo {
-    width: 80px; /* Ajusta el tamaño del logo */
-    height: auto;
+    height: 55px; /* Ajusta el tamaño del logo */
+    width: auto;
     margin-right: 10px;
 }
 
 header h1 {
     font-size: 2.0em;
     color: #00d2ff;
-    margin-top: 20px ;
+    margin-top: 90px ;
     font-weight: bold;
     display: inline-block;
 }
@@ -49,7 +58,7 @@ nav {
 nav a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 1.1em;
+    font-size: 1.2em;
     transition: color 0.3s;
 }
 
