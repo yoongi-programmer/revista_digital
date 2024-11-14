@@ -11,24 +11,31 @@
 <body>
     <!-- Video de fondo -->
     <div class="background-image">
-        <img src="./img/bg_video1.gif" alt="Fondo animado">
+        <img src="./img/bg_gif2.gif" alt="Fondo animado">
         <div class="overlay"></div>
     </div>    
 
     <!-- Encabezado -->
     <header>
+        <div class="header-container">
+            <!-- Logo -->
+            <img src="./img/logo.png" alt="Logo Expo Técnica" class="logo"> 
+            <!-- Navegación -->
+            <nav>
+                <a href="#home">Inicio</a>
+                <a href="#features">Básica</a>
+                <a href="#features">Informática</a>
+                <a href="#contact">Construcciones</a>
+            </nav>
+        </div>
+        <!-- Título -->
         <h1>EXPO TÉCNICA</h1>
         <p>Descubre el futuro de la tecnología hoy.</p>
-        <nav>
-            <a href="#home">Inicio</a>
-            <a href="#features">Básica</a>
-            <a href="#features">Informática</a>
-            <a href="#contact">Construcciones</a>
-        </nav>
     </header>
+    
 
     <!-- Sección de bienvenida -->
-    <section class="hero" id="home">
+    <section class="descripcion" id="descripcion">
         <div class="content">
             <h2>Bienvenidos a Nuestra Plataforma</h2>
             <p>Somos pioneros en soluciones tecnológicas de vanguardia, diseñadas para transformar la manera en que vivimos e interactuamos con el mundo digital.</p>
@@ -37,23 +44,24 @@
     </section>
 
     <!-- Sección de características -->
-    <section class="features" id="features">
-        <div class="feature-item">
+    <section class="orientaciones" id="orientaciones">
+        <div class="orientacion-item">
             <h3>Innovación Constante</h3>
             <p>Nuestro equipo de expertos trabaja continuamente para crear soluciones avanzadas y optimizadas.</p>
         </div>
-        <div class="feature-item">
+        <div class="orientacion-item">
             <h3>Alta Seguridad</h3>
             <p>Nos aseguramos de que todos nuestros sistemas estén protegidos con las últimas tecnologías de seguridad.</p>
         </div>
-        <div class="feature-item">
+        <div class="orientacion-item">
             <h3>Interfaz Intuitiva</h3>
             <p>Desarrollamos experiencias de usuario que son fáciles de usar, accesibles y estéticamente agradables.</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact">
+    <footer id="contacto">
+        <img src="./img/escudo_escuela.png" alt="Logo pequeño" class="footer-logo">
         <p>&copy; E.E.S.T.N°2 "República Argentina". Todos los derechos reservados.</p>
     </footer>
 

@@ -9,18 +9,30 @@
 }
 /*-------------- Encabezado ---------------*/
 header {
-    position: absolute;
-    top: 20px;
-    left: 20px;
+    position: relative;
+    padding: 20px;
     color: #ffffff;
+}
+/* Contenedor del header para alinear logo, título y nav */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+    width: 80px; /* Ajusta el tamaño del logo */
+    height: auto;
+    margin-right: 10px;
 }
 
 header h1 {
-    font-size: 2.5em;
+    font-size: 2.0em;
     color: #00d2ff;
-    margin-bottom: 5px;
+    margin-top: 20px ;
     font-weight: bold;
-    font-style: italic;
+    display: inline-block;
 }
 
 header p {
@@ -31,12 +43,13 @@ header p {
 nav {
     display: flex;
     gap: 15px;
+    margin-left: auto;
 }
 
 nav a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 1em;
+    font-size: 1.1em;
     transition: color 0.3s;
 }
 
@@ -70,33 +83,33 @@ nav a:hover {
     background: rgba(0, 0, 0, 0.5);
 }
 
-/* Sección de bienvenida */
-.hero {
+/* Sección de bienvenida y descripcion */
+.descripcion {
     display: flex;
     align-items: flex-start;
     text-align: left;
-    padding: 200px 20px;
+    padding: 20px 20px;
     color: #ffffff;
     position: relative;
 }
 
-.hero .content {
+.descripcion .content {
     max-width: 600px;
 }
 
-.hero h2 {
+.descripcion h2 {
     font-size: 2.2em;
     margin-bottom: 15px;
 }
 
-.hero p {
+.descripcion p {
     font-size: 1.1em;
     color: #b0c7e6;
     line-height: 1.5;
     margin-bottom: 20px;
 }
 
-.hero button {
+.descripcion button {
     background-color: #00d2ff;
     border: none;
     padding: 12px 30px;
@@ -108,17 +121,17 @@ nav a:hover {
     transition: background-color 0.3s;
 }
 
-.hero button:hover {
+.descripcion button:hover {
     background-color: #8ab4f8;
 }
 
 /* Sección de características */
-.features {
+.orientaciones {
     padding: 50px 20px;
     text-align: center;
 }
 
-.feature-item {
+.orientacion-item {
     background-color: rgba(13, 42, 78, 0.8);
     padding: 20px;
     border-radius: 8px;
@@ -128,17 +141,17 @@ nav a:hover {
     transition: transform 0.3s;
 }
 
-.feature-item:hover {
+.orientacion-item:hover {
     transform: translateY(-10px);
 }
 
-.feature-item h3 {
+.orientacion-item h3 {
     color: #00d2ff;
     font-size: 1.5em;
     margin-bottom: 10px;
 }
 
-.feature-item p {
+.orientacion-item p {
     color: #b0c7e6;
     line-height: 1.5;
 }
@@ -150,19 +163,40 @@ footer {
     text-align: center;
     color: #8ab4f8;
     font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-logo {
+    width: 20px; /* Tamaño pequeño del logo */
+    height: auto;
+    margin-right: 8px; /* Espacio entre el logo y el texto */
 }
 
 /* Responsivo */
 @media (max-width: 600px) {
+    .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    /* Título y logo se alinean verticalmente */
+    .logo {
+        height: 50px;
+        width: 50px;
+    }
+    
+    nav {
+        flex-direction: row; /* Cambia a columna si necesitas más espacio en móviles */
+        gap: 10px;
+    }
+    
     header h1 {
         font-size: 1.8em;
     }
 
     .hero h2 {
         font-size: 1.5em;
-    }
-
-    nav {
-        flex-direction: column;
     }
 }
