@@ -7,24 +7,20 @@
     font-weight: 400;
     font-style: normal;
 }
-
-body {
-    background-color: #0a0f1f;
+/*-------------- Encabezado ---------------*/
+header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
     color: #ffffff;
 }
 
-/* Encabezado */
-header {
-    background: #0d2a4e;
-    padding: 20px;
-    text-align: center;
-}
-
 header h1 {
-    font-size: 3.5em;
+    font-size: 2.5em;
     color: #00d2ff;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-weight: bold;
+    font-style: italic;
 }
 
 header p {
@@ -32,12 +28,9 @@ header p {
     color: #8ab4f8;
 }
 
-/* Menú de navegación */
 nav {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 10px;
+    gap: 15px;
 }
 
 nav a {
@@ -51,33 +44,62 @@ nav a:hover {
     color: #00d2ff;
 }
 
+/*-------------- Estilos para el video de fondo --------------*/
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.background-image img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+}
+
 /* Sección de bienvenida */
 .hero {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 50px 20px;
-    background: linear-gradient(145deg, #0a1a33, #0c2748);
+    align-items: flex-start;
+    text-align: left;
+    padding: 200px 20px;
+    color: #ffffff;
+    position: relative;
+}
+
+.hero .content {
+    max-width: 600px;
 }
 
 .hero h2 {
-    font-size: 2em;
+    font-size: 2.2em;
     margin-bottom: 15px;
 }
 
 .hero p {
     font-size: 1.1em;
     color: #b0c7e6;
-    max-width: 600px;
     line-height: 1.5;
+    margin-bottom: 20px;
 }
 
 .hero button {
     background-color: #00d2ff;
     border: none;
     padding: 12px 30px;
-    margin-top: 20px;
     font-size: 1em;
     color: #0a0f1f;
     font-weight: bold;
@@ -92,19 +114,16 @@ nav a:hover {
 
 /* Sección de características */
 .features {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 50px 20px;
-    gap: 30px;
+    text-align: center;
 }
 
 .feature-item {
-    background-color: #0d2a4e;
+    background-color: rgba(13, 42, 78, 0.8);
     padding: 20px;
     border-radius: 8px;
     max-width: 500px;
-    width: 100%;
+    margin: 20px auto;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s;
 }
@@ -144,14 +163,6 @@ footer {
     }
 
     nav {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        gap: 10px;
-        padding: 10px;
-    }
-
-    nav a {
-        white-space: nowrap;
+        flex-direction: column;
     }
 }

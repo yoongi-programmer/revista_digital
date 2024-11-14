@@ -5,17 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expo TEC</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Share+Tech&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Share+Tech&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
 </head>
 <body>
+    <!-- Video de fondo -->
+    <div class="background-image">
+        <img src="./img/bg_video1.gif" alt="Fondo animado">
+        <div class="overlay"></div>
+    </div>    
+
     <!-- Encabezado -->
     <header>
         <h1>EXPO TÉCNICA</h1>
         <p>Descubre el futuro de la tecnología hoy.</p>
         <nav>
             <a href="#home">Inicio</a>
-            <a href="#features">Básica  </a>
+            <a href="#features">Básica</a>
             <a href="#features">Informática</a>
             <a href="#contact">Construcciones</a>
         </nav>
@@ -23,9 +29,11 @@
 
     <!-- Sección de bienvenida -->
     <section class="hero" id="home">
-        <h2>Bienvenidos a Nuestra Plataforma</h2>
-        <p>Somos pioneros en soluciones tecnológicas de vanguardia, diseñadas para transformar la manera en que vivimos e interactuamos con el mundo digital.</p>
-        <button onclick="descubrirMas()">Descubre Más</button>
+        <div class="content">
+            <h2>Bienvenidos a Nuestra Plataforma</h2>
+            <p>Somos pioneros en soluciones tecnológicas de vanguardia, diseñadas para transformar la manera en que vivimos e interactuamos con el mundo digital.</p>
+            <button onclick="descubrirMas()">Descubre Más</button>
+        </div>
     </section>
 
     <!-- Sección de características -->
