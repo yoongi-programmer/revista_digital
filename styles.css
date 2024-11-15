@@ -1,4 +1,4 @@
-/* Estilos generales */
+/*---------------------------- Estilos generales ---------------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -7,66 +7,7 @@
     font-weight: 400;
     font-style: normal;
 }
-/*-------------- Encabezado ---------------*/
-header {
-    position: relative;
-    padding: 20px;
-    color: #ffffff;
-}
-/* Contenedor del header para alinear logo, título y nav */
-.header-container {
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000; /* Asegura que el encabezado esté por encima del resto del contenido */
-    padding: 10px 20px;
-    display: flex;
-    position: fixed;
-    background-color: #000f25bb;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
-    margin-bottom: 20px;
-}
-
-/* Logo */
-.logo {
-    height: 55px; /* Ajusta el tamaño del logo */
-    width: auto;
-    margin-right: 10px;
-}
-
-header h1 {
-    font-size: 2.0em;
-    color: #00d2ff;
-    margin-top: 90px ;
-    font-weight: bold;
-    display: inline-block;
-}
-
-header p {
-    font-size: 1.2em;
-    color: #8ab4f8;
-}
-
-nav {
-    display: flex;
-    gap: 15px;
-    margin-left: auto;
-}
-
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #00d2ff;
-}
-
-/*-------------- Estilos para el video de fondo --------------*/
+/*---------------------------- Estilos para el video de fondo ----------------------------*/
 .background-image {
     position: fixed;
     top: 0;
@@ -91,8 +32,113 @@ nav a:hover {
     height: 100vh;
     background: rgba(0, 0, 0, 0.5);
 }
+/*---------------------------- Cuadro de texto info dinamico ----------------------------*/
+.info-box {
+    display: none; /* Oculto al inicio */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    width: 40%;
+    max-width: 300px;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    animation: fadeIn 0.5s ease; /* Animación de entrada */
+    text-align: center;
+}
+/* Botón de cierre */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    color: #fff;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+.info-box img {
+    width: 70px;
+    height: auto;
+    border-radius: 8px;
+    margin: 0 auto 15px; /* Centrará la imagen horizontalmente */
+    display: block; /* Hace que el margen auto funcione */
+}
 
-/* Sección de bienvenida y descripcion */
+.info-content p {
+    font-size: 1em;
+    text-align: center;
+    margin: 0;
+}
+
+/* Animación de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -30%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -20%);
+    }
+}
+/* Animación de fade-out */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translate(-50%, -20%);
+    }
+    to {
+        opacity: 0;
+        transform: translate(-50%, -30%);
+    }
+}
+/*--------------- Encabezado ----------------*/
+header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que el encabezado esté por encima del resto del contenido */
+    padding: 10px 20px;
+    display: flex;
+    position: fixed;
+    background-color: #000f25bb;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+    margin-bottom: 20px;
+}
+
+/* Logo */
+.logo {
+    height: 55px; /* Ajusta el tamaño del logo */
+    width: auto;
+    margin-right: 10px;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #00d2ff;
+}
+
+/*--------------- Sección de bienvenida y descripcion ---------------*/
 .descripcion {
     display: flex;
     align-items: flex-start;
@@ -106,9 +152,17 @@ nav a:hover {
     max-width: 600px;
 }
 
-.descripcion h2 {
-    font-size: 2.2em;
-    margin-bottom: 15px;
+.descripcion h1 {
+    font-size: 2.0em;
+    color: #00d2ff;
+    margin-top: 90px ;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.subtitulo p {
+    font-size: 1.2em;
+    color: #8ab4f8;
 }
 
 .descripcion p {
@@ -134,10 +188,12 @@ nav a:hover {
     background-color: #8ab4f8;
 }
 
-/* Sección de características */
+/*--------------- Sección de orientaciones ---------------*/
 .orientaciones {
     padding: 50px 20px;
     text-align: center;
+    display: flex;
+    flex-direction: row;
 }
 
 .orientacion-item {
@@ -145,7 +201,7 @@ nav a:hover {
     padding: 20px;
     border-radius: 8px;
     max-width: 500px;
-    margin: 20px auto;
+    margin: 20px 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s;
 }
@@ -165,7 +221,7 @@ nav a:hover {
     line-height: 1.5;
 }
 
-/* Footer */
+/* ------------------------------ Footer ------------------------------ */
 footer {
     background: #0d2a4e;
     padding: 20px;
@@ -182,7 +238,7 @@ footer {
     margin-right: 8px; /* Espacio entre el logo y el texto */
 }
 
-/* Responsivo */
+/* ------------------------------ Responsivo ------------------------------ */
 @media (max-width: 600px) {
     .header-container {
         flex-direction: row;
@@ -200,12 +256,21 @@ footer {
         flex-direction: row; /* Cambia a columna si necesitas más espacio en móviles */
         gap: 10px;
     }
-    
+    nav a {
+        font-size: 1.0em;
+    }    
     header h1 {
         font-size: 1.8em;
     }
 
     .hero h2 {
         font-size: 1.5em;
+    }
+
+    .orientaciones {
+        padding: 50px 5px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
     }
 }

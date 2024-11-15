@@ -17,29 +17,33 @@
 
     <!-- Encabezado -->
     <header id="home">
-        <div class="header-container">
-            <!-- Logo -->
-            <img src="./img/logo.png" alt="Logo Expo Técnica" class="logo"> 
-            <!-- Navegación -->
-            <nav>
-                <a href="#home">Inicio</a>
-                <a href="#basica">Básica</a>
-                <a href="#informatica">Informática</a>
-                <a href="#construcciones">Construcciones</a>
-            </nav>
-        </div>
-        <!-- Título -->
-        <h1>EXPO TÉCNICA</h1>
-        <p>Descubre el trabajo realizado por nuestros estudiantes </p>
+        <!-- Logo -->
+        <img src="./img/logo.png" alt="Logo Expo Técnica" class="logo"> 
+        <!-- Navegación -->
+        <nav>
+            <a href="#home">Inicio</a>
+            <a href="#basica">Básica</a>
+            <a href="#informatica">Informática</a>
+            <a href="#construcciones">Construcciones</a>
+        </nav>
     </header>
-    
 
     <!-- Sección de bienvenida -->
     <section class="descripcion" id="descripcion">
         <div class="content">
-            <h2>Bienvenidos a la Muestra Anual de la E.E.S.T.N°2</h2>
+            <!-- Título -->
+            <h1>BIENVENIDO A LA EXPO TÉCNICA</h1>
+            <p class="subtitulo">Descubre el trabajo realizado por nuestros estudiantes </p>
             <p>La Expo Técnica es una muestra anual que se realiza para exponer y mostrar todo el esfuerzo y trabajo que realizan día a día los chicos de la técnica, cada uno en su área</p>|
-            <button onclick="descubrirMas()">Conocer más</button>
+            <button onclick="mostrarInfo()">Conocer más</button>
+        </div>
+        <!-- Cuadro de información adicional -->
+        <div class="info-box" id="infoBox">
+            <button class="close-btn" onclick="cerrarInfo()">X</button>
+            <div class="info-content">
+                <img src="./img/info_img.png" alt="Imagen descriptiva">
+                <p>Agradecemos su interés. ¡Descubre más sobre nuestros proyectos!</p>
+            </div>
         </div>
     </section>
 
