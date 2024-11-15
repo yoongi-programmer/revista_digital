@@ -17,3 +17,23 @@ function cerrarInfo() {
         infoBox.style.animation = ""; // Restablece la animación
     }, 500); // 500 ms = duración de la animación de fadeOut
 }
+
+//-----------------------VIDEO BACKGROUND--------------------
+document.querySelectorAll('.video-background').forEach(videoContainer => {
+    const videos = videoContainer.querySelectorAll('.video');
+    let currentVideo = 0;
+
+    // Función para cambiar al siguiente video
+    function showNextVideo() {
+        videos[currentVideo].classList.remove('active');
+        currentVideo = (currentVideo + 1) % videos.length; // Ciclo de videos
+        videos[currentVideo].classList.add('active');
+    }
+
+    // Inicia el primer video como activo
+    videos[currentVideo].classList.add('active');
+
+    // Cambia el video cada 5 segundos (ajusta el tiempo si es necesario)
+    setInterval(showNextVideo, 5000);
+});
+
